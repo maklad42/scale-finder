@@ -2,7 +2,12 @@
 
 @font-face {
   font-family: Metal Lord;
-  src: url("../fonts/metal-lord.ttf");
+  src: url('../fonts/metal-lord.ttf');
+}
+
+:root {
+  --dark-gr: #3f3f3fdd;
+  --light-gr: rgba(128, 128, 128, 0.9);
 }
 
 body {
@@ -12,7 +17,7 @@ body {
 
 #header {
   font-family: Metal Lord;
-  text-shadow: 3px 3px 3px #838DA5;
+  text-shadow: 3px 3px 3px #838da5;
   font-size: 2em;
   text-align: center;
 }
@@ -25,7 +30,7 @@ body {
   min-height: 700px;
   margin: auto;
   margin-top: 50px;
-  border: 3px solid #777777;
+  border: 3px solid var(--light-gr);
 }
 
 #selector {
@@ -35,17 +40,29 @@ body {
   padding-bottom: 50px;
 }
 
+.showing {
+  font-size: 1.25rem;
+  padding: 7px;
+  margin: 10px auto 20px auto;
+  border: 1px solid var(--light-gr);
+  background-color: var(--dark-gr);
+  width: 500px;
+}
+
+.show-name {
+  font-family: Metal Lord;
+  padding-right: 2rem;
+}
+
 #fretupdate {
-  background-color: #3f3f3f;
+  background-color: var(--dark-gr);
   text-align: center;
   margin: auto;
-  border: 1px solid gray;
-  border-radius: 10px;
-  padding:2px 5px 2px 5px;
+  border: 1px solid var(--light-gr);
+  padding: 0.4rem;
   margin-top: 10px;
-  width: 100px;
+  width: 120px;
   font-size: 0.8em;
-  box-shadow: 2px 2px 2px #2f2f2f;
 }
 
 #fretupdate:hover {
@@ -62,7 +79,8 @@ body {
   margin: auto;
 }
 
-.nut, .fret {
+.nut,
+.fret {
   width: 25px;
   height: 16px;
 }
